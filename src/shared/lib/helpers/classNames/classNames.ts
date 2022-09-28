@@ -1,7 +1,7 @@
 type Mods = Record<string, boolean | string>
 const obj: Mods = {
-    'hovered': 'aaaaadsda'
-}
+    hovered: 'aaaaadsda',
+};
 
 export function classNames(cls: string, mods: Mods = {}, additional: string[] = []): string {
     return [
@@ -9,8 +9,8 @@ export function classNames(cls: string, mods: Mods = {}, additional: string[] = 
         ...additional.filter(Boolean),
         Object.entries(mods)
             .filter(([className, value]) => Boolean(value))
-            .map(([className]) => className)
-    ].join(' ')
+            .map(([className]) => className),
+    ].join(' ');
 }
 
-classNames('remove-btn', {hovered: true, selectable: true, red: true}, ['pdg'])
+classNames('remove-btn', { hovered: true, selectable: true, red: true }, ['pdg']);

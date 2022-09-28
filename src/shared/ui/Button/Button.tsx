@@ -1,9 +1,6 @@
-import {useTheme, Theme} from 'app/providers/ThemeProvider'
-import {classNames} from 'shared/lib/helpers/classNames/classNames';
+import { classNames } from 'shared/lib/helpers/classNames/classNames';
+import { ButtonHTMLAttributes, FC } from 'react';
 import cls from './Button.module.scss';
-import LightIcon from 'shared/assets/icons/theme-light.svg'
-import DarkIcon from 'shared/assets/icons/theme-dark.svg'
-import {ButtonHTMLAttributes, FC} from 'react'
 
 export enum ThemeButton {
     CLEAR = 'clear'
@@ -24,7 +21,8 @@ export const Button: FC<ButtonProps> = (props) => {
 
     return (
         <button
-            className={classNames(cls.Button, {[cls[theme]]: true}, [className])}
+            type="button"
+            className={classNames(cls.Button, { [cls[theme]]: true }, [className])}
             {...otherProps}
         >
             {children}
