@@ -2,5 +2,8 @@
     "Язык": "Русский",
     "Тестовый перевод": "Test example",
     "Главная страница" : "Main page",
-    "Страница не найдена": "Page is not found"
+    "Страница не найдена": "Page is not found",
+    "Пробросить ошибку": "Throw error",
+    "Произошла непредвиденная ошибка": "An unexpected error has occurred",
+    "Обновить страницу": "Update page"
 }
