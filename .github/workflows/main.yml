@@ -17,11 +17,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: install modules
-        run: npm install
+        run: npm ic
       - name: build production project
         run: npm run build:prod
   lints:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [ 17.x ]
@@ -29,13 +29,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: installing modules
-        run: npm install
+        run: npm ic
       - name: linting typescript
         run: npm run lint:ts
       - name: linting css
         run: npm run lint:scss
   tests:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [ 17.x ]
@@ -43,7 +43,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: installing modules
-        run: npm install
+        run: npm ic
       - name: unit testing
         run: npm run test:unit
   storybook:
@@ -55,7 +55,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: installing modules
-        run: npm install
+        run: npm ic
       - name: build storybook
         run: npm run storybook:build
       - name: screenshot testing
