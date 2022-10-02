@@ -21,7 +21,10 @@ jobs:
       - name: build production project
         run: npm run build:prod
   lints:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        node-version: [ 17.x ]
     needs: [start]
     steps:
       - uses: actions/checkout@v2
@@ -32,7 +35,10 @@ jobs:
       - name: linting css
         run: npm run lint:scss
   tests:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        node-version: [ 17.x ]
     needs: [start]
     steps:
       - uses: actions/checkout@v2
@@ -41,7 +47,10 @@ jobs:
       - name: unit testing
         run: npm run test:unit
   storybook:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        node-version: [ 16.x ]
     needs: [start]
     steps:
       - uses: actions/checkout@v2
