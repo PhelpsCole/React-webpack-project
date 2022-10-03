@@ -47,10 +47,10 @@ jobs:
       - name: unit testing
         run: npm run test:unit
   storybook:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ 16.x ]
+        node-version: [ 17.x ]
     needs: [start]
     steps:
       - uses: actions/checkout@v2
