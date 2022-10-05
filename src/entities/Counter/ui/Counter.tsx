@@ -1,6 +1,7 @@
 import { Button } from 'shared/ui/Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import { StateSchema } from 'app/providers/StoreProvider/config/StateSchema';
+import { useTranslation } from 'react-i18next';
 import { counterActions } from '../model/slice/counterSlice';
 
 export const Counter = () => {
@@ -15,22 +16,23 @@ export const Counter = () => {
         dispatch(counterActions.decrement());
     };
 
+    const { t } = useTranslation();
+
     return (
         <div>
             <h1>
-                Value =
-                {' '}
+                {t('Значение = ')}
                 {counterValue}
             </h1>
             <Button
                 onClick={increment}
             >
-                increment
+                {t('увеличить')}
             </Button>
             <Button
                 onClick={decrement}
             >
-                decrement
+                {t('уменьшить')}
             </Button>
         </div>
     );
