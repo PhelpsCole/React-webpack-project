@@ -7,8 +7,6 @@ const MainPage = () => {
 
     return (
         <div>
-            <BugButton />
-            <Counter />
             {t('Главная страница')}
         </div>
     );
