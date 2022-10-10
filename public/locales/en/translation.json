@@ -8,5 +8,11 @@
     "Произошла непредвиденная ошибка": "An unexpected error has occurred",
     "Обновить страницу": "Update page",
     "Главная": "Main page",
-    "О нас": "About us"
+    "О нас": "About us",
+    "Войти": "Login",
+    "Выйти": "Logout",
+    "Введите логин": "Input login",
+    "Введите пароль": "Input password",
+    "Форма авторизации": "Authorization form",
+    "Неверный логин или пароль": "Wrong login or password"
 }
