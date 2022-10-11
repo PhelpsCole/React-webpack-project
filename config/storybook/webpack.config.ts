@@ -28,5 +28,9 @@ export default ({ config }: {config: webpack.Configuration}) => {
     config.plugins.push(new DefinePlugin({
         __IS_DEV__: true,
     }));
+    config.resolve.modules = [
+        path.resolve(__dirname, '../../src'),
+        'node_modules',
+    ];
     return config;
 };
