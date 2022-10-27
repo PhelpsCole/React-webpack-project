@@ -4,7 +4,6 @@ import { render } from '@testing-library/react';
 import { I18nextProvider } from 'react-i18next';
 import i18nForTest from 'shared/config/i18n/i18nForTest';
 import { StateSchema, StoreProvider } from 'app/providers/StoreProvider';
-import { DeepPartial } from '@reduxjs/toolkit';
 
 export interface ComponentRenderOptions {
     route?: string;
