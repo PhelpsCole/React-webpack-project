@@ -4,7 +4,7 @@ import { fetchProfileData } from '../services/fetchProfileData/fetchProfileData'
 import { updateProfileData } from '../services/updateProfileData/updateProfileData';
 
 const initialState: ProfileSchema = {
-    readonly: true,
+    readOnly: true,
     isLoading: false,
     error: undefined,
     data: undefined,
@@ -15,10 +15,10 @@ export const profileSlice = createSlice({
     initialState,
     reducers: {
         setReadonly: (state, action: PayloadAction<boolean>) => {
-            state.readonly = action.payload;
+            state.readOnly = action.payload;
         },
         cancelEdit: (state) => {
-            state.readonly = true;
+            state.readOnly = true;
             state.form = state.data;
         },
         updateProfile: (state, action: PayloadAction<Profile>) => {
@@ -47,7 +47,7 @@ export const profileSlice = createSlice({
                 state.error = action.payload;
             })
             .addCase(updateProfileData.pending, (state) => {
-                state.error = undefined;
+                state.validateErrors = undefined;
                 state.isLoading = true;
             })
             .addCase(updateProfileData.fulfilled, (
@@ -57,11 +57,12 @@ export const profileSlice = createSlice({
                 state.isLoading = false;
                 state.data = action.payload;
                 state.form = action.payload;
-                state.readonly = true;
+                state.readOnly = true;
+                state.validateErrors = undefined;
             })
             .addCase(updateProfileData.rejected, (state, action) => {
                 state.isLoading = false;
-                state.error = action.payload;
+                state.validateErrors = action.payload;
             });
     },
 });
