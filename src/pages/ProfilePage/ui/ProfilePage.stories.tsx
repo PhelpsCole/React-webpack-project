@@ -4,7 +4,6 @@ import { ComponentStory, ComponentMeta, addDecorator } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import avatar from 'shared/assets/tests/storybook.jpg';
 import ProfilePage from './ProfilePage';
 import { Country } from '../../../entities/Country';
 import { Currency } from '../../../entities/Currency';
@@ -31,7 +30,6 @@ Light.decorators = [StoreDecorator({
             city: 'Mariupol',
             country: Country.Ukraine,
             currency: Currency.RUB,
-            avatar,
         },
     },
 })];
@@ -48,7 +46,6 @@ Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
             city: 'Mariupol',
             country: Country.Ukraine,
             currency: Currency.RUB,
-            avatar,
         },
     },
 })];

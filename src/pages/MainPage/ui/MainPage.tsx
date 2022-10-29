@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useState } from 'react';
+import { Text } from 'shared/ui/Text/Text';
 
 const MainPage = memo(() => {
     const { t } = useTranslation();
@@ -10,9 +11,10 @@ const MainPage = memo(() => {
     };
 
     return (
-        <div>
-            {t('Главная страница')}
-        </div>
+        <Text
+            title={t('Главная страница')}
+            text={t('Вступительный текст')}
+        />
     );
 });
 
