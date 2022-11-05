@@ -106,13 +106,15 @@
     {
       "id": "1",
       "username": "admin",
-      "password": "123"
+      "password": "123",
+      "avatar": "https://pikuco.ru/upload/test_stable/ddb/ddbf961d820c289b55a8cf82a8a92fbb.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://teknotower.com/wp-content/uploads/2020/11/js.png"
     }
   ],
   "profile": {

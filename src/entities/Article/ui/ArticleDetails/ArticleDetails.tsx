@@ -21,6 +21,7 @@ import {
 import {
     ArticleImageBlockComponent,
 } from 'entities/Article/ui/ArticleImageBlockComponent/ArticleImageBlockComponent';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
 import {
     getArticleDetailData,
