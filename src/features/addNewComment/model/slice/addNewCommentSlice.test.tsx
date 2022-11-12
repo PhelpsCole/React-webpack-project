@@ -7,6 +7,6 @@ describe('addNewComment.test', () => {
         expect(addNewCommentReducer(
             state as AddNewCommentSchema,
             addNewCommentActions.setText('123123'),
-        )).toEqual({ username: '123123' });
+        )).toEqual({ text: '123123' });
     });
 });
