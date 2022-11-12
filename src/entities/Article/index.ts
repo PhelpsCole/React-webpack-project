@@ -4,3 +4,4 @@ export {
 
 export type { Article } from './model/types/article';
 export type { ArticleDetailSchema } from './model/types/articleDetailSchema';
+export { getArticleDetailData } from './model/selectors/articleDetail';

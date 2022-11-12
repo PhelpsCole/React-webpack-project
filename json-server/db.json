@@ -117,14 +117,28 @@
       "avatar": "https://teknotower.com/wp-content/uploads/2020/11/js.png"
     }
   ],
-  "profile": {
-    "first": "Phelps",
-    "lastname": "Cole",
-    "age": 22,
-    "currency": "RUB",
-    "country": "Russia",
-    "city": "Moscow",
-    "username": "admin",
-    "avatar": "https://pikuco.ru/upload/test_stable/ddb/ddbf961d820c289b55a8cf82a8a92fbb.jpg"
-  }
+  "profile": [
+      {
+        "id": "1",
+      "first": "Phelps",
+      "lastname": "Cole",
+      "age": 22,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "admin",
+      "avatar": "https://pikuco.ru/upload/test_stable/ddb/ddbf961d820c289b55a8cf82a8a92fbb.jpg"
+    },
+    {
+      "id": "2",
+      "first": "ulbi tv",
+      "lastname": "asf",
+      "age": 465,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "ulbi tv",
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    }
+  ]
 }
