@@ -7,7 +7,7 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDeco
 import ArticleDetailPage from './ArticleDetailPage';
 
 export default {
-    title: 'pages/ArticleDetailsPage',
+    title: 'pages/ArticleDetailPage',
     component: ArticleDetailPage,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -27,7 +27,7 @@ const article: Article = {
     type: [ArticleType.IT],
     user: {
         id: '1',
-        username: 'Ulbi tv',
+        username: 'admin',
     },
     blocks: [
         {
