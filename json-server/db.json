@@ -20,6 +20,7 @@
       "views": 1022,
       "createdAt": "26.02.2022",
       "type": ["IT"],
+      "userID": "1",
       "blocks": [
         {
           "id": "1",

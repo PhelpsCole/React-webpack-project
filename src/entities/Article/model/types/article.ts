@@ -1,7 +1,14 @@
+import { User } from 'entities/User';
+
 export enum ArticleBLockType {
-    IMG= 'IMAGE',
+    IMG = 'IMAGE',
     CODE = 'CODE',
     TEXT = 'TEXT',
+}
+
+export enum ArticleView {
+    LIST = 'LIST',
+    GRID = 'GRID',
 }
 
 export interface ArticleBLockBase {
@@ -38,6 +45,7 @@ export interface Article {
     id: string;
     title: string;
     subtitle: string;
+    user: User;
     img: string;
     views: number;
     createdAt: string;
