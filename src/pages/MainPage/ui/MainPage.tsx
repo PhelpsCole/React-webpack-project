@@ -1,8 +1,13 @@
 import { useTranslation } from 'react-i18next';
 import { memo, useState } from 'react';
 import { Text } from 'shared/ui/Text/Text';
+import { classNames } from 'shared/lib/classNames/classNames';
 
-const MainPage = memo(() => {
+interface MainPageProps {
+    className?: string;
+}
+
+const MainPage = memo(({ className } : MainPageProps) => {
     const { t } = useTranslation();
     const [value, setValue] = useState('');
 
@@ -11,10 +16,12 @@ const MainPage = memo(() => {
     };
 
     return (
-        <Text
-            title={t('Главная страница')}
-            text={t('Вступительный текст')}
-        />
+        <div className={classNames('', {}, [className])}>
+            <Text
+                title={t('Главная страница')}
+                text={t('Вступительный текст')}
+            />
+        </div>
     );
 });
 
