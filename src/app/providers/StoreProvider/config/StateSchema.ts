@@ -7,15 +7,16 @@ import {
 import { CombinedState } from 'redux';
 import { ProfileSchema } from 'entities/Profile';
 import { AxiosInstance } from 'axios';
-import { NavigateOptions, To } from 'react-router-dom';
 import { ArticleDetailSchema } from 'entities/Article';
 import { ArticleDetailCommentSchema } from 'pages/ArticleDetailPage';
 import { AddNewCommentSchema } from 'features/addNewComment';
 import { ArticlesPageSchema } from 'pages/ArticlePage';
+import { ScrollSaveSchema } from 'features/ScrollSave';
 
 export interface StateSchema {
     counter: CounterSchema;
     user: UserSchema;
+    scrollSave: ScrollSaveSchema;
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
     articleDetail?: ArticleDetailSchema;
