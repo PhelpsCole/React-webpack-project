@@ -35,6 +35,7 @@ export const ArticleViewSelector = (props: ArticleViewSelectorProps) => {
                 <Button
                     theme={ButtonTheme.CLEAR}
                     onClick={onClick(viewTypes.view)}
+                    key={viewTypes.view}
                 >
                     <Icon
                         Svg={viewTypes.icon}

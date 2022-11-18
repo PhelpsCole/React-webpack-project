@@ -12,3 +12,5 @@ export const
     getArticlesPageNum = (state: StateSchema) => state.articlesPage?.page || 1;
 export const
     getArticlesHasMore = (state: StateSchema) => state.articlesPage?.hasMore;
+export const
+    getArticlesInited = (state: StateSchema) => state.articlesPage?._inited;

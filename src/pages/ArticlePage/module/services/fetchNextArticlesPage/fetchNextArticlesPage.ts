@@ -1,6 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConf } from 'app/providers/StoreProvider';
-import { Article } from 'entities/Article';
 import {
     getArticlesHasMore, getArticlesPageIsLoading,
     getArticlesPageLimit,
@@ -14,7 +13,7 @@ export const fetchNextArticlesPage = createAsyncThunk<
     void,
     ThunkConf<string>
     >(
-        'articlesPage/fetchArticlesList',
+        'articlesPage/fetchNextArticlesPage',
         async (_, thunkApi) => {
             const { getState, dispatch } = thunkApi;
             const hasMore = getArticlesHasMore(getState());
